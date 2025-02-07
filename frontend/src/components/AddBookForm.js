@@ -78,7 +78,7 @@ const AddBookForm = ({
     try {
       if (isEditing) {
         const response = await axios.put(
-          `https://books-1-11jl.onrender.com/api/books/${book._id}`,
+          `https://books-wnlk.onrender.com/api/books/${book._id}`,
           newBook
         );
         setBooks((prevBooks) =>
@@ -88,7 +88,7 @@ const AddBookForm = ({
         );
       } else {
         const response = await axios.post(
-          "https://books-1-11jl.onrender.com/api/books",
+          "https://books-wnlk.onrender.com/api/books",
           newBook
         );
         if (response.data) {
