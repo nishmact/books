@@ -7,14 +7,14 @@ const SearchBar = ({ setSearchResults }) => {
   const handleSearch = () => {
     if (query === '') {
      
-      axios.get('https://books-1-11jl.onrender.com/api/books')
+      axios.get('https://books-wnlk.onrender.com/api/books')
         .then(response => {
           setSearchResults(response.data);
         })
         .catch(error => console.error(error));
     } else {
      
-      axios.get(`http://localhost:5000/api/books/search?query=${query}`)
+      axios.get(`https://books-wnlk.onrender.com/api/books/search?query=${query}`)
         .then(response => {
           setSearchResults(response.data);
         })
