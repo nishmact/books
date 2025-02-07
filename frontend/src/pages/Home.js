@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     // Fetch books on initial load
     axios
-      .get("https://books-1-11jl.onrender.com/api/books")
+      .get("https://books-wnlk.onrender.com/api/books")
       .then((response) => {
         setBooks(response.data);
         setSearchResults(response.data); // Show all books initially
