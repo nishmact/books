@@ -7,7 +7,7 @@ const SearchBar = ({ setSearchResults }) => {
   const handleSearch = () => {
     if (query === '') {
      
-      axios.get('http://localhost:5000/api/books')
+      axios.get('https://books-1-11jl.onrender.com/api/books')
         .then(response => {
           setSearchResults(response.data);
         })
