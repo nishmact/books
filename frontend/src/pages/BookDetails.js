@@ -13,7 +13,7 @@ const BookDetails = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/books")
+      .get("https://books-1-11jl.onrender.com/api/books")
       .then((response) => setBooks(response.data))
       .catch((error) => console.error(error));
   }, []); 
@@ -32,7 +32,7 @@ const BookDetails = () => {
   const handleDeleteConfirm = () => {
     if (bookToDelete) {
       axios
-        .delete(`http://localhost:5000/api/books/${bookToDelete._id}`)
+        .delete(`https://books-1-11jl.onrender.com/api/books/${bookToDelete._id}`)
         .then(() => {
           setBooks((prevBooks) =>
             prevBooks.filter((book) => book._id !== bookToDelete._id)
